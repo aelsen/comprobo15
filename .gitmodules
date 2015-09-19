@@ -1,3 +1,6 @@
 [submodule "getting_familiar"]
 	path = getting_familiar
 	url = https://github.com/aclairekeum/getting_familiar
+[submodule "compRoboWarmupProject"]
+	path = compRoboWarmupProject
+	url = https://github.com/thomasnat1/compRoboWarmupProject.git
