@@ -4,3 +4,6 @@
 [submodule "compRoboWarmupProject"]
 	path = compRoboWarmupProject
 	url = https://github.com/thomasnat1/compRoboWarmupProject.git
+[submodule "robot_localization"]
+	path = robot_localization
+	url = https://github.com/aelsen/robot_localization

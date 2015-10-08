@@ -1,0 +1,49 @@
+Particle Filters and Robot Localization
+Computational Robotics 2015
+Thomas Nattestand, Antonia Elsen
+
+
+
+in your ROS package create a file to hold your project writeup. Any format is fine (markdown, word, pdf, etc.). Your writeup should touch on the following topics:
+What was the goal of your project?
+How did you solve the problem? (Note: this doesn't have to be super-detailed, you should try to explain what you did at a high-level so that others in the class could reasonably understand what you did).
+Describe a design decision you had to make when working on your project and what you ultimately did (and why)? These design decisions could be particular choices for how you implemented some part of an algorithm or perhaps a decision regarding which of two external packages to use in your project.
+What if any challenges did you face along the way?
+What would you do to improve your project if you had more time?
+Did you learn any interesting lessons for future robotic programming projects? These could relate to working on robotics projects in teams, working on more open-ended (and longer term) problems, or any other relevant topic.
+
+What was the goal of your project?
+===
+- Implement a particle filter for a robot localization algorithm.
+
+How did you solve the problem?
+===
+	- Create particle cloud (with noise)
+	- Update particle cloud with motion (translation; rotation) based on odom (with noise)
+	- Weigh particles using the lidar scan data, and occupancy field (likelihoods)
+	- Update robot location using high weight point(s).
+	- Cull low-weight points, resample (add more particles)
+	- Repeat
+
+Describe a design decision you had to make when working on your project and what you ultimately did.
+===
+- One high weight particle instead of average of multiple particles
+- Select top n particles
+
+What if any challenges did you face along the way?
+===
+- Trig mistakes galore!
+- Incomplete code (didn't read over code)
+
+What would you do to improve your project if you had more time?
+===
+- Particle cloud diversity; thick clouds of tightly packed, low variance partcles, outer cloud of high variance particles. (Assume tightly packed == more accurate, loosely packed == easier to re-localize when lost)
+- Copies of particles in same position, with different orientations
+
+Did you learn any interesting lessions?
+===
+- Check your code. Check it again! Did you miss any variables?
+- Flesh out code in pseudocode, on board, etc.
+- Print out data generated from various steps in filter; a more helpful step above this is to publish anything you can to rviz.
+- Trigonometry is a sneaky bitch.
+- Text?
